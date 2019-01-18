@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Header from './header'
 import './layout.css'
@@ -9,6 +10,13 @@ const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
+        placeholderImage: file(relativePath: { eq: "logo.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         site {
           siteMetadata {
             title
@@ -18,7 +26,9 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title}>
+          <Img style={{width: '100px'}} fluid={data.placeholderImage.childImageSharp.fluid}/>
+        </Header>
         <div
           style={{
             margin: `0 auto`,
@@ -29,9 +39,7 @@ const Layout = ({ children }) => (
         >
           {children}
           <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <p>© {new Date().getFullYear()}, RC Tech</p>
           </footer>
         </div>
       </>
