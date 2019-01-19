@@ -1,25 +1,29 @@
 import React from 'react'
-import Layout from '../components/layout'
+import { graphql, StaticQuery } from 'gatsby'
+
 import SEO from '../components/seo'
-import { graphql, StaticQuery } from 'gatsby';
+import Homepagelogo from '../components/homepagelogo'
+import Header from '../components/Header'
 
 const IndexPage = () => (
-  <Layout>
+  <div className={'container'} style={{height: '100vh'}}>
     <StaticQuery 
       query={keywordsQuery}
       render={data => (
-        <SEO title="Home" keywords={data.site.siteMetadata.keywords} />
+        <SEO title={data.site.siteMetadata.title} keywords={data.site.siteMetadata.keywords} />
       )}
     />
-    
-  </Layout>
+    <Header/>
+    <Homepagelogo/>
+  </div>
 )
 
 
 const keywordsQuery = graphql`
-  query keywords{
+  query keywords {
     site{
       siteMetadata{
+        title
         keywords
       }
     }
