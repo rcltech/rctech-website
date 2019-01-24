@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'Utkarsh Goel',
       position: 'Founder',
-      description: '',
+      description: 'What is a community without developers?',
       image: 'utkarsh.jpg'
     },
     {
@@ -15,31 +15,32 @@ module.exports = {
     {
       name: 'Seyoung ‘Angela’ Park',
       position: 'Designer',
-      description: "",
+      description: 'She is a true member of the "Commeownist" party with an amazing sense for design',
       image: 'gela.jpg'
     },
     {
       name: 'Siddhant Bagri',
       position: 'Developer',
-      description: 'Engineering, Year 1 from Kolkata, India.',
+      description: 'He is an Engineering, Year 1 student from Kolkata, India.',
       image: 'siddhant.jpg'
     },
     {
       name: 'Uzair Bin Colangoy Asim',
       position: 'Developer | Electronics',
-      description: 'I like programming.',
+      description: `You won't hear much from him. He just like programming.`,
       image: 'uzair.jpg'
     },
     {
       name: 'Rajat Jain',
       position: 'Developer',
-      description: 'I am second year undergraduate student majoring in Computer Science. I am always on the run to learn, build and explore. I am passionate about Machine Learning and Artificial Intelligence.',
+      description: 'He is a second year undergraduate student majoring in Computer Science. He is always on the run to learn, build and explore and has a passion for Machine Learning and Artificial Intelligence.',
       image: 'rajat.jpg'
     },
     {
       name: 'Ahmed Cheema',
       position: 'Writer',
-      description: 'Year 3, Electrical Engineering Student. Working as part of RC tech’s publication and workshop teams to present, advertise and inform the hallmates about upcoming events/projects and work to achieve/complete those projects.\n',
+      description: 'He is a Year 3, Electrical Engineering Student. He works as part of RC tech’s publication and ' +
+        'workshop teams to present, advertise and inform everyone about upcoming events/projects and work',
       image: 'cheema.jpg'
     },
     {
