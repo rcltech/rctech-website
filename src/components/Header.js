@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { Button, withStyles } from '@material-ui/core'
+import { Link } from 'gatsby'
 
 const styles = {
   heading: {
-    padding: '20px'
+    padding: '20px',
   },
   button: {
     padding: '10px',
-    color: 'white'
+    color: 'white',
   },
 }
 class Header extends Component {
@@ -18,12 +19,12 @@ class Header extends Component {
 
     return (
       <header className={`row d-flex justify-content-end ${classes.heading}`}>
-        <Button className={classes.button}>
-          Team
-        </Button>
+        <Link to={'/team'}>
+          <Button className={classes.button}>Team</Button>
+        </Link>
       </header>
     )
   }
 }
 
-export default withStyles(styles) (Header)
+export default withStyles(styles)(Header)

@@ -1,9 +1,12 @@
+const membersInfo = require('./membersInfo');
+
 module.exports = {
   siteMetadata: {
     title: `RC Tech`,
     description: `Developer community at RC Lee Hall`,
     author: `@rcltech`,
-    keywords: [`rctech`, `hku`, `rclee`]
+    keywords: [`rctech`, `hku`, `rclee`],
+    ...membersInfo
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
