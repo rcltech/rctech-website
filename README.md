@@ -9,4 +9,4 @@
 1. Learn
   * HTML, CSS and Javascript
   * React, Gatsby and Graphql
-1. Let Utkarsh handle the rest.
+2. Let Utkarsh handle the rest.
