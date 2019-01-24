@@ -3,12 +3,10 @@
     <img alt="RC logo" src="./src/images/logo.png" width="100" />
   </a>
 </p>
-<h1 align="center">
-  RC Tech Gatsby Development
-</h1>
+<h1 align="center">RC Tech Gatsby Development</h1>
 
-<h3>How did we do it?</h3>
+### How did we do it?
 1. Learn
   * HTML, CSS and Javascript
   * React, Gatsby and Graphql
-* Let Utkarsh handle the rest.
+1. Let Utkarsh handle the rest.
