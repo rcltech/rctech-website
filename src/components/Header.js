@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, withStyles } from '@material-ui/core'
+import { Button, Typography, withStyles } from '@material-ui/core'
 import { Link } from 'gatsby'
 
 const styles = {
@@ -8,8 +8,14 @@ const styles = {
   },
   button: {
     padding: '10px',
-    color: 'white',
+    marginLeft: '20px'
   },
+  buttonText: {
+    fontSize: '24px',
+    fontWeight: 'bold',
+    color: 'white',
+    textTransform: 'none'
+  }
 }
 class Header extends Component {
   state = { activeItem: 'home' }
@@ -19,8 +25,8 @@ class Header extends Component {
 
     return (
       <header className={`row d-flex justify-content-end ${classes.heading}`}>
-        <Link to={'/team'}>
-          <Button className={classes.button}>Team</Button>
+        <Link to={'/team'} style={{textDecoration: 'none'}}>
+          <Button className={classes.button} key={'team'}><Typography variant={'h5'} className={classes.buttonText}>Team</Typography></Button>
         </Link>
       </header>
     )

@@ -23,6 +23,13 @@ const styles = {
   nameTag: {
     fontSize: '24px',
     fontWeight: 'bold'
+  },
+  positionTag: {
+    fontSize: '18px',
+  },
+  profileImage:{
+    borderRadius: '50%',
+    margin: '20px'
   }
 }
 
@@ -58,13 +65,16 @@ const MemberCard = props => {
             }
 
             const imageSizes = image.node.childImageSharp.sizes
-            return <Img alt={props.alt} sizes={imageSizes}/>
+            return <Img alt={props.alt} sizes={imageSizes} className={classes.profileImage}/>
           }}
         />
       </CardMedia>
       <CardContent>
         <Typography className={`${classes.text} ${classes.nameTag}`} gutterBottom variant="h2" component="h2">
           {props.name}
+        </Typography>
+        <Typography className={`${classes.text} ${classes.positionTag}`} gutterBottom variant="h3" component="h3">
+          {props.position}
         </Typography>
         <Typography className={classes.text} component="p">{props.description}</Typography>
       </CardContent>
