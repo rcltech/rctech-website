@@ -33,14 +33,15 @@ module.exports = {
     {
       name: 'Rajat Jain',
       position: 'Developer',
-      description: 'He is a second year undergraduate student majoring in Computer Science. He is always on the run to learn, build and explore and has a passion for Machine Learning and Artificial Intelligence.',
+      description: 'He is a second year undergraduate student majoring in Computer Science. He is always on the run to ' +
+        'learn, build and explore and has a passion for Machine Learning and Artificial Intelligence.',
       image: 'rajat.jpg'
     },
     {
       name: 'Ahmed Cheema',
       position: 'Writer',
       description: 'He is a Year 3, Electrical Engineering Student. He works as part of RC tech’s publication and ' +
-        'workshop teams to present, advertise and inform everyone about upcoming events/projects and work',
+        'workshop teams to present, advertise and inform everyone about upcoming events/projects',
       image: 'cheema.jpg'
     },
     {
