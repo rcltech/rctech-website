@@ -22,8 +22,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `RC Tech`,
+        short_name: `RC Tech`,
         start_url: `/`,
         background_color: `#000`,
         theme_color: `#000`,
