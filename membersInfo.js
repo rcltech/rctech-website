@@ -9,7 +9,7 @@ module.exports = {
     {
       name: 'Sean Chok',
       position: 'Developer | Maker',
-      description: '',
+      description: 'is ridiculous sometimes...',
       image: 'seanchok.jpg'
     },
     {
