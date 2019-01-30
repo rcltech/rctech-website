@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-
+import {background} from './colorscheme'
 export default class HTML extends React.Component {
   render() {
     return (
@@ -17,6 +17,7 @@ export default class HTML extends React.Component {
               integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
               crossOrigin="anonymous"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800,900"/>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"/>
       </head>
       <body {...this.props.bodyAttributes}>
       {this.props.preBodyComponents}
@@ -25,7 +26,7 @@ export default class HTML extends React.Component {
         id="___gatsby"
         className={'container-fluid'}
         dangerouslySetInnerHTML={{ __html: this.props.body }}
-        style={{backgroundColor: 'black'}}
+        style={{backgroundColor: background }}
       />
 
       {this.props.postBodyComponents}

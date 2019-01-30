@@ -1,4 +1,5 @@
 const membersInfo = require('./membersInfo');
+const news = require('./homepagenews');
 
 module.exports = {
   siteMetadata: {
@@ -6,7 +7,8 @@ module.exports = {
     description: `Developer community at RC Lee Hall`,
     author: `@rcltech`,
     keywords: [`rctech`, `hku`, `rclee`],
-    ...membersInfo
+    ...membersInfo,
+    ...news
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

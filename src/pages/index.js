@@ -1,33 +1,66 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
-
 import SEO from '../components/seo'
-import Homepagelogo from '../components/homepagelogo'
-import Header from '../components/Header'
 
-const IndexPage = () => (
-  <div className={'container'} style={{height: '100vh'}}>
-    <StaticQuery 
+import Header from '../components/Header'
+import NewsCard from '../components/NewsCard'
+
+const IndexPage = props => (
+  <div>
+    <StaticQuery
       query={keywordsQuery}
-      render={data => (
-        <SEO title={data.site.siteMetadata.title} keywords={data.site.siteMetadata.keywords} />
-      )}
+      render={data => {
+        return (
+          <div className={'container'} style={{ height: '100vh' }}>
+            <SEO
+              title={data.site.siteMetadata.title}
+              keywords={data.site.siteMetadata.keywords}
+            />
+            <Header />
+            <div className={'row'}>
+              <NewsCard
+                heading={data.site.siteMetadata.news.title}
+                date={data.site.siteMetadata.news.date}
+                body={data.site.siteMetadata.news.body}
+                image={data.site.siteMetadata.news.image}
+              />
+            </div>
+          </div>
+        )
+      }}
     />
-    <Header/>
-    <Homepagelogo/>
   </div>
 )
 
-
 const keywordsQuery = graphql`
   query keywords {
-    site{
-      siteMetadata{
+    site {
+      siteMetadata {
         title
         keywords
+        news {
+          title
+          date
+          body
+          image
+        }
       }
     }
   }
 `
 
+const newsQuery = graphql`
+  query newsQuery {
+    site {
+      siteMetadata {
+        news {
+          title
+          date
+          body
+          image
+        }
+      }
+    }
+  }
+`
 export default IndexPage

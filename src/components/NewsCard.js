@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
+import CardMedia from './MemberCard'
 import CardContent from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
-import Img from 'gatsby-image'
-import { graphql, StaticQuery } from 'gatsby'
 import { text } from '../colorscheme'
+import { graphql, StaticQuery } from 'gatsby'
+import Card from '@material-ui/core/Card'
+import Img from 'gatsby-image'
+import { withStyles } from '@material-ui/core/styles'
 
 const styles = {
   card: {
     width: '100%',
-    backgroundColor: 'rgba(0,0,0,0)',
-    elevation: 0,
+    backgroundColor: text,
   },
   media: {
     objectFit: 'cover',
@@ -36,10 +36,11 @@ const styles = {
   },
 }
 
-const MemberCard = props => {
-  const { classes } = props
+const NewsCard = props => {
+  const {classes} = props
+
   return (
-    <div className={classes.card}>
+    <Card>title
       <CardMedia>
         <StaticQuery
           query={graphql`
@@ -85,7 +86,7 @@ const MemberCard = props => {
           variant="h2"
           component="h2"
         >
-          {props.name}
+          {props.heading}
         </Typography>
         <Typography
           className={`${classes.text} ${classes.positionTag}`}
@@ -93,21 +94,22 @@ const MemberCard = props => {
           variant="h3"
           component="h3"
         >
-          {props.position}
+          {props.date}
         </Typography>
         <Typography className={classes.text} component="p">
-          {props.description}
+          {props.body}
         </Typography>
       </CardContent>
-    </div>
+    </Card>
   )
 }
 
-MemberCard.propTypes = {
-  name: PropTypes.string.isRequired,
-  position: PropTypes.string,
-  description: PropTypes.string.isRequired,
+NewsCard.propTypes = {
+  classes: PropTypes.object.isRequired,
   image: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
 }
 
-export default withStyles(styles)(MemberCard)
+export default withStyles(styles)(NewsCard)

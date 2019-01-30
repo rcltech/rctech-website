@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import { graphql, Link } from 'gatsby'
 import MemberCard from '../components/MemberCard'
-import Homepagelogo from '../components/homepagelogo'
+import Logo from '../components/Logo'
 
 const styles = {
   root: {
@@ -32,7 +32,7 @@ class Team extends Component {
         <div className={`row ${classes.header}`}>
           <div className={'col-8 offset-2'}>
             <Link to={'/'}>
-              <Homepagelogo/>
+              <Logo/>
             </Link>
           </div>
         </div>
