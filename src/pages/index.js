@@ -10,6 +10,7 @@ const IndexPage = props => (
     <StaticQuery
       query={keywordsQuery}
       render={data => {
+
         return (
           <div className={'container'} style={{ height: '100vh' }}>
             <SEO
@@ -19,10 +20,10 @@ const IndexPage = props => (
             <Header />
             <div className={'row'}>
               <NewsCard
-                heading={data.site.siteMetadata.news.title}
-                date={data.site.siteMetadata.news.date}
-                body={data.site.siteMetadata.news.body}
-                image={data.site.siteMetadata.news.image}
+                heading={data.site.siteMetadata.news[0].title}
+                date={data.site.siteMetadata.news[0].date}
+                body={data.site.siteMetadata.news[0].body}
+                image={data.site.siteMetadata.news[0].image}
               />
             </div>
           </div>
@@ -49,18 +50,4 @@ const keywordsQuery = graphql`
   }
 `
 
-const newsQuery = graphql`
-  query newsQuery {
-    site {
-      siteMetadata {
-        news {
-          title
-          date
-          body
-          image
-        }
-      }
-    }
-  }
-`
 export default IndexPage

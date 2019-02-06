@@ -30,7 +30,7 @@ class Team extends Component {
     return (
       <div className={`container ${classes.root}`}>
         <div className={`row ${classes.header}`}>
-          <div className={'col-8 offset-2'}>
+          <div className={'col-2 offset-5'}>
             <Link to={'/'}>
               <Logo/>
             </Link>
