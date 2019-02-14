@@ -37,8 +37,8 @@ const NewsCard = props => {
 
   return (
     <Card className={classes.card}>
-      <div className={'row'}>
-        <div className={'col-4'}>
+      <div className={'row d-flex align-items-center'}>
+        <div className={'col-4 p-4'}>
           <CardMedia>
             <StaticQuery
               query={graphql`
@@ -72,7 +72,7 @@ const NewsCard = props => {
             />
           </CardMedia>
         </div>
-        <div className={'col-8'}>
+        <div className={'p-2 col-8'}>
           <CardContent>
             <Typography
               className={`${classes.text} ${classes.nameTag}`}
