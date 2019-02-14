@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withStyles } from '@material-ui/core'
+import { Button, Typography, withStyles } from '@material-ui/core'
 import { Link } from 'gatsby'
 import Logo from './Logo'
 import { text } from '../colorscheme'
@@ -13,7 +13,7 @@ const styles = {
     marginLeft: '20px',
   },
   buttonText: {
-    fontSize: '24px',
+    fontSize: '18px',
     textTransform: 'none',
     fontFamily: 'Quicksand, sans-serif',
     fontWeight: 900,
@@ -23,7 +23,7 @@ const styles = {
     fontFamily: 'Quicksand, sans-serif',
     fontWeight: 900,
     color: text,
-    fontSize: '24px'
+    fontSize: '18px'
   },
 }
 class Header extends Component {
@@ -33,12 +33,21 @@ class Header extends Component {
     const { classes } = this.props
 
     return (
-      <header className={`row d-flex align-items-center ${classes.heading}`}>
-        <div className={'col-2'}>
+      <header className={`d-flex align-items-center ${classes.heading}`}>
+        <div className={'col-5 col-sm-2'}>
           <Logo />
         </div>
-        <div className={'col-7'}>
+        <div className={'d-none d-sm-block'}>
           <Link to={'/team'} style={{textDecoration: 'none'}}><h1 className={classes.logoText}>RC Tech Club</h1></Link>
+        </div>
+        <div className={'ml-auto p-2'}>
+          <Link to={'/team'} style={{ textDecoration: 'none' }}>
+            <Button className={classes.button} key={'team'}>
+              <Typography variant={'h5'} className={classes.buttonText}>
+                Team
+              </Typography>
+            </Button>
+          </Link>
         </div>
       </header>
     )
