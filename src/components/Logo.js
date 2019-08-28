@@ -6,8 +6,6 @@ import { graphql, StaticQuery } from 'gatsby'
 const styles = {
   fullImage: {
     width: '100%',
-    maxWidth: '70%',
-    maxHeight: "70%",
     margin: "0 auto",
   }
 }

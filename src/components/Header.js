@@ -40,15 +40,6 @@ class Header extends Component {
         <div className={'d-none d-sm-block'}>
           <Link to={'/team'} style={{textDecoration: 'none'}}><h1 className={classes.logoText}>RC Tech Club</h1></Link>
         </div>
-        <div className={'ml-auto p-2'}>
-          <Link to={'/team'} style={{ textDecoration: 'none' }}>
-            <Button className={classes.button} key={'team'}>
-              <Typography variant={'h5'} className={classes.buttonText}>
-                Team
-              </Typography>
-            </Button>
-          </Link>
-        </div>
       </header>
     )
   }
