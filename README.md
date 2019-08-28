@@ -5,8 +5,9 @@
 </p>
 <h1 align="center">RC Tech Gatsby Development</h1>
 
-### How did we do it?
-1. Learn
-  * HTML, CSS and Javascript
-  * React, Gatsby and Graphql
-2. Let Utkarsh handle the rest.
+## Development setup:
+
+1. Run `npm install` to install dependencies.
+2. Run `gatsby develop` to run in development.
+3. Run `gatsby build` to make a build
+4. Run `gh-pages -d public/ -r https://github.com/rcltech/rcltech.github.io.git -b master` to publish.
