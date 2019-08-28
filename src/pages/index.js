@@ -3,29 +3,32 @@ import { graphql, StaticQuery } from 'gatsby'
 import SEO from '../components/seo'
 
 import Header from '../components/Header'
-import NewsCard from '../components/NewsCard'
+import Grid from '@material-ui/core/Grid'
+import MemberCard from '../components/MemberCard'
+
+const getTeamMembers = (data) => {
+  return(
+    <Grid item xs={12} md={4} lg={4} key={data.name}>
+      <MemberCard name={data.name} description={data.description} image={data.image} position={data.position}/>
+    </Grid>
+  )
+}
 
 const IndexPage = props => (
   <div>
     <StaticQuery
       query={keywordsQuery}
       render={data => {
-
         return (
-          <div className={'container'} style={{ height: '100vh' }}>
+          <div className={'container'}>
             <SEO
               title={data.site.siteMetadata.title}
               keywords={data.site.siteMetadata.keywords}
             />
             <Header />
-            <div className={'row'}>
-              <NewsCard
-                heading={data.site.siteMetadata.news[0].title}
-                date={data.site.siteMetadata.news[0].date}
-                body={data.site.siteMetadata.news[0].body}
-                image={data.site.siteMetadata.news[0].image}
-              />
-            </div>
+            <Grid container spacing={24}>
+              {data.site.siteMetadata.members.map(member => getTeamMembers(member))}
+            </Grid>
           </div>
         )
       }}
@@ -39,10 +42,10 @@ const keywordsQuery = graphql`
       siteMetadata {
         title
         keywords
-        news {
-          title
-          date
-          body
+        members {
+          name
+          position
+          description
           image
         }
       }
