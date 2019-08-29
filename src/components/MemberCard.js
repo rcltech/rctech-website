@@ -12,6 +12,8 @@ const styles = {
   card: {
     width: '100%',
     backgroundColor: 'rgba(0,0,0,0)',
+    maxWidth: 'calc(240px + 8vmax)',
+    margin: 'auto',
     elevation: 0,
   },
   media: {

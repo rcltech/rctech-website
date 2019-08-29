@@ -8,7 +8,7 @@ import MemberCard from '../components/MemberCard'
 
 const getTeamMembers = (data) => {
   return(
-    <Grid item xs={12} md={4} lg={4} key={data.name}>
+    <Grid item xs={12} sm={6} md={4} lg={4} key={data.name}>
       <MemberCard name={data.name} description={data.description} image={data.image} position={data.position}/>
     </Grid>
   )
