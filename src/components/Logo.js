@@ -5,7 +5,7 @@ import { graphql, StaticQuery } from 'gatsby'
 
 const styles = {
   fullImage: {
-    width: '100%',
+    maxHeight: 'calc(112px + 1vmin)',
     margin: "0 auto",
   }
 }
@@ -26,7 +26,7 @@ const Logo = () => {
         }
       `}
       render={data => (
-        <div className={'d-flex align-items-center justify-content-center'}>
+        <div>
           <Img
             fluid={data.placeholderImage.childImageSharp.fluid}
             style={styles.fullImage}
