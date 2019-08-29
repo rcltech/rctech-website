@@ -3,16 +3,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import SEO from '../components/seo'
 
 import Header from '../components/Header'
-import Grid from '@material-ui/core/Grid'
-import MemberCard from '../components/MemberCard'
-
-const getTeamMembers = (data) => {
-  return(
-    <Grid item xs={12} sm={6} md={4} lg={4} key={data.name}>
-      <MemberCard name={data.name} description={data.description} image={data.image} position={data.position}/>
-    </Grid>
-  )
-}
+import MemberGrid from '../components/MemberGrid'
 
 const IndexPage = props => (
   <div>
@@ -26,9 +17,7 @@ const IndexPage = props => (
               keywords={data.site.siteMetadata.keywords}
             />
             <Header />
-            <Grid container spacing={24}>
-              {data.site.siteMetadata.members.map(member => getTeamMembers(member))}
-            </Grid>
+            <MemberGrid />
           </div>
         )
       }}
@@ -42,12 +31,6 @@ const keywordsQuery = graphql`
       siteMetadata {
         title
         keywords
-        members {
-          name
-          position
-          description
-          image
-        }
       }
     }
   }
