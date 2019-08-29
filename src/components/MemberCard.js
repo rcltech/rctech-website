@@ -21,7 +21,7 @@ const styles = {
   },
   text: {
     textAlign: 'center',
-    fontFamily: 'Quicksand, sans-serif',
+    fontFamily: 'inherit',
     fontWeight: 900,
     color: text,
   },
