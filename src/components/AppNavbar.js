@@ -1,14 +1,25 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
+import { text } from '../colorscheme'
 
 const styles = {
-
+  container: {
+    maxWidth: 'calc(315px + 5vmax)',
+    margin: 'auto'
+  },
+  navbarHeading: {
+    fontWeight: 900,
+    color: text,
+  },
+  link: {
+    fontWeight: 800,
+  }
 }
 
 class AppNavbar extends Component {
   state = {
-    collapsed: true
+    collapsed: false
   }
 
   toggleNavbar = () => {
@@ -21,17 +32,22 @@ class AppNavbar extends Component {
     const { classes } = this.props;
 
     return (
-      <div>
-        <Navbar color="white" light>
-          <NavbarBrand className="mr-auto">reactstrap</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+      <div className={classes.container}>
+        <Navbar color="fade" dark>
+          <NavbarBrand className="mr-auto">
+            <span className={classes.navbarHeading}>
+              Our Apps
+            </span>
+          </NavbarBrand>
+          <NavbarToggler onClick={this.toggleNavbar} className={`mr-2 ${classes.toggler}`} />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="">Link 1</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="">Link 2</NavLink>
+                <NavLink href="https://rctech.club/sls">
+                  <span className={classes.link}>
+                    Smart Laundry System
+                  </span>
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>
