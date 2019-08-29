@@ -4,6 +4,7 @@ import SEO from '../components/seo'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from '../components/Header'
+import AppNavbar from '../components/AppNavbar'
 import MemberGrid from '../components/MemberGrid'
 
 const IndexPage = props => (
@@ -18,6 +19,7 @@ const IndexPage = props => (
               keywords={data.site.siteMetadata.keywords}
             />
             <Header />
+            <AppNavbar />
             <MemberGrid />
           </div>
         )
