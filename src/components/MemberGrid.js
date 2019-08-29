@@ -1,8 +1,22 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 
-import Grid from '@material-ui/core/Grid'
+import { Grid, Typography, withStyles } from '@material-ui/core'
 import MemberCard from './MemberCard'
+import { text } from '../colorscheme'
+
+const styles = {
+  container: {
+    margin: '2vh auto',
+  },
+  gridHeading: {
+    textAlign: 'center',
+    fontFamily: 'inherit',
+    fontWeight: 900,
+    fontSize: '1.5em',
+    color: text,
+  }
+}
 
 const getTeamMembers = (data) => {
   return(
@@ -12,22 +26,33 @@ const getTeamMembers = (data) => {
   )
 }
 
-const MemberGrid = props => (
-  <div>
-    <StaticQuery
-      query={membersQuery}
-      render={data => {
-        return (
-          <div>
-            <Grid container spacing={24}>
-              {data.site.siteMetadata.members.map(member => getTeamMembers(member))}
-            </Grid>
-          </div>
-        )
-      }}
-    />
-  </div>
-)
+const MemberGrid = props => {
+  const { classes } = props
+  return (
+    <div className={classes.container}>
+      <StaticQuery
+        query={membersQuery}
+        render={data => {
+          return (
+            <div>
+              <Typography
+                className={`${classes.gridHeading}`}
+                gutterBottom
+                variant="h2"
+                component="h2"
+              >
+                Our Team
+              </Typography>
+              <Grid container spacing={24}>
+                {data.site.siteMetadata.members.map(member => getTeamMembers(member))}
+              </Grid>
+            </div>
+          )
+        }}
+      />
+    </div>
+  )
+}
 
 const membersQuery = graphql`
   query members {
@@ -44,4 +69,4 @@ const membersQuery = graphql`
   }
 `
 
-export default MemberGrid
+export default withStyles(styles)(MemberGrid)
