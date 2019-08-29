@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import SEO from '../components/seo'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from '../components/Header'
 import MemberGrid from '../components/MemberGrid'
