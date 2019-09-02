@@ -7,7 +7,7 @@ import { text } from '../colorscheme'
 
 const styles = {
   container: {
-    margin: '2vh auto',
+    margin: '5vh auto 2vh auto',
   },
   gridHeading: {
     textAlign: 'center',
