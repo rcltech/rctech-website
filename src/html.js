@@ -26,7 +26,7 @@ export default class HTML extends React.Component {
         id="___gatsby"
         className={'container-fluid'}
         dangerouslySetInnerHTML={{ __html: this.props.body }}
-        style={{backgroundColor: background }}
+        style={{backgroundColor: background, fontFamily: 'Quicksand, sans-serif'}}
       />
 
       {this.props.postBodyComponents}

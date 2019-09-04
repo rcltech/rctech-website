@@ -12,6 +12,8 @@ const styles = {
   card: {
     width: '100%',
     backgroundColor: 'rgba(0,0,0,0)',
+    maxWidth: 'calc(240px + 8vmax)',
+    margin: 'auto',
     elevation: 0,
   },
   media: {
@@ -19,16 +21,19 @@ const styles = {
   },
   text: {
     textAlign: 'center',
-    fontFamily: 'Quicksand, sans-serif',
+    fontFamily: 'inherit',
     fontWeight: 900,
     color: text,
   },
   nameTag: {
-    fontSize: '24px',
+    fontSize: '1.3em',
     fontWeight: 'bold',
   },
   positionTag: {
-    fontSize: '18px',
+    fontSize: '1em',
+  },
+  descriptionText: {
+    fontSize: '0.8em',
   },
   profileImage: {
     borderRadius: '50%',
@@ -95,7 +100,7 @@ const MemberCard = props => {
         >
           {props.position}
         </Typography>
-        <Typography className={classes.text} component="p">
+        <Typography className={`${classes.text} ${classes.descriptionText}`} component="p">
           {props.description}
         </Typography>
       </CardContent>
