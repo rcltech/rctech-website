@@ -21,7 +21,7 @@ module.exports = {
     {
       name: 'Siddhant Bagri',
       position: 'Developer',
-      description: 'He is an Engineering, Year 1 student from Kolkata, India.',
+      description: 'Passionate about coding and sharing ideas!',
       image: 'siddhant.jpg'
     },
     {
