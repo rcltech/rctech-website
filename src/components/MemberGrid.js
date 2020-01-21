@@ -7,6 +7,7 @@ import { text } from '../colorscheme'
 
 const styles = {
   container: {
+    display: "grid",
     margin: '5vh auto 2vh auto',
   },
   gridHeading: {
@@ -15,6 +16,9 @@ const styles = {
     fontWeight: 900,
     fontSize: '1.5em',
     color: text,
+  },
+  headline: {
+    margin: "40px 0"
   }
 }
 
@@ -29,28 +33,29 @@ const getTeamMembers = (data) => {
 const MemberGrid = props => {
   const { classes } = props
   return (
-    <div className={classes.container}>
+    <>
       <StaticQuery
         query={membersQuery}
         render={data => {
           return (
-            <div>
+            <>
               <Typography
                 className={`${classes.gridHeading}`}
                 gutterBottom
                 variant="h2"
                 component="h2"
+                style={styles.headline}
               >
                 Our Team
               </Typography>
-              <Grid container spacing={24}>
+              <Grid container spacing={10}>
                 {data.site.siteMetadata.members.map(member => getTeamMembers(member))}
               </Grid>
-            </div>
+            </>
           )
         }}
       />
-    </div>
+    </>
   )
 }
 

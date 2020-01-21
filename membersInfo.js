@@ -3,31 +3,31 @@ module.exports = {
     {
       name: 'Utkarsh Goel',
       position: 'Founder',
-      description: 'What is a community without developers?',
+      description: 'Software engineer, Hobbyist in Electronics',
       image: 'utkarsh.jpg'
     },
     {
       name: 'Sean Chok',
       position: 'Developer | Maker',
-      description: 'is ridiculous sometimes...',
+      description: 'Web developer',
       image: 'seanchok.jpg'
     },
     {
       name: 'Seyoung ‘Angela’ Park',
       position: 'Designer',
-      description: 'She is a true member of the "Commeownist" party with an amazing sense for design',
+      description: 'Communication design, media production',
       image: 'gela.jpg'
     },
     {
       name: 'Siddhant Bagri',
       position: 'Developer',
-      description: 'Passionate about coding and sharing ideas!',
+      description: 'Web developer',
       image: 'siddhant.jpg'
     },
     {
       name: 'Welvin Bun',
       position: 'Developer',
-      description: '',
+      description: 'Web developer',
       image: 'welvin.png'
     },
   ]

@@ -5,12 +5,14 @@ import Logo from './Logo'
 const styles = {
   heading: {
     padding: '20px',
-    height: 'auto',
     alignItems: 'center',
     justifyContent: 'center',
     margin: 'auto',
+    display: "grid",
+    gridTemplateColumns: "auto 200px auto",
   },
 }
+
 class Header extends Component {
   state = { activeItem: 'home' }
 
@@ -20,7 +22,9 @@ class Header extends Component {
     return (
       <div>
         <Container className={classes.heading}>
+          <div></div>
           <Logo />
+          <div></div>
         </Container>
       </div>
     )

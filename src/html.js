@@ -4,7 +4,7 @@ import {background} from './colorscheme'
 export default class HTML extends React.Component {
   render() {
     return (
-      <html {...this.props.htmlAttributes}>
+      <html {...this.props.htmlAttributes} style={{backgroundColor: background, fontFamily: 'Quicksand, sans-serif'}}>
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
